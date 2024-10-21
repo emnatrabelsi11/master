@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Booking Form</title>
+    <link rel="stylesheet" href="..//BackOffice/css/style.css">
+    <script src="../BackOffice/js/func.js"></script>
+
+</head>
+<body>
+    <center><h1>Travel Offer Form</h1></center>
+    <form id="OfferForm" action="../BackOffice/Verification.php" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" id="title" ><br><br>
+        <p id="titleer" style="color:red; display:none;">Title must be at least 3 characters.</p>
+        <p id="titlesuccess" style="color:green; display:none;">Correct!</p><br>
+        <label>Destination:</label>
+        <input type="text" name="destination" id="destination"><br><br>
+        <p id="deser" style="color:red; display:none;">Destination must contain only letters and spaces, at least 3 characters.</p>
+        <p id="destinationsuccess" style="color:green; display:none;">Correct!</p><br>
+        <label>Departure Date:</label>
+        <input type="date" name="departure_date" id="departure_date"><br><br>
+        <p id="depdater" style="color:red; display:none;">Please select a valid departure date.</p>
+        <p id="departuredatesuccess" style="color:green; display:none;">Correct!</p><br>
+        <label>Return Date:</label>
+        <input type="date" name="return_date" id="return_date"><br><br>
+        <p id="retdater" style="color:red; display:none;">Return date must be later than departure date.</p>
+        <p id="returndatesuccess" style="color:green; display:none;">Correct!</p><br>
+        <label>Price:</label>
+        <input type="number" name="price" id="price" placeholder="E.g., 59.99DT"><br><br>
+        <p id="prer" style="color:red; display:none;">Price must be a positive number.</p>
+        <p id="pricesuccess" style="color:green; display:none;">Correct!</p><br>
+        <label>Available:</label>
+        <input type="checkbox" name="disponible" value="1" id="checkbox"><br><br>
+        <p id="checker" style="color:red; display:none;">Please check the availability.</p>
+        <p id="checkboxsuccess" style="color:green; display:none;">Correct!</p><br>
+        <label for="category">Category:</label><br>
+        <select id="category" name="category">
+            <option value="">Select a category</option>
+            <option value="vacation">Vacation</option>
+            <option value="adventure">Adventure</option>
+            <option value="culture">Culture</option>
+            <option value="wellness">Wellness</option>
+        </select><br>
+        <p id="cater" style="color:red; display:none;">Please select a category.</p>
+        <p id="categorysuccess" style="color:green; display:none;">Correct!</p><br>
+       <center><input type="submit" style="background-color: #00A3E0; color: white; padding: 12px 20px; border-radius: 5px; font-weight: bold;" value="Submit Offer"></center> 
+
+    </form>
+</body>
+</html>
